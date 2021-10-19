@@ -21,4 +21,14 @@ describe("MyFizzBuzzShould", () => {
         expect(fizzWords).toHaveLength(33);
     });
 
+    test("Insert a 'Buzz' word instead of the value each 5 elements", () => {
+        const fizzBuzz = new FizzBuzz();
+        fizzBuzz.setValues(100);
+
+        const values = fizzBuzz.getValues();
+        const fizzWords = values.filter(value => value === "Buzz");
+
+        expect(fizzWords).toHaveLength(33);
+    });
+
 });
