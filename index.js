@@ -5,11 +5,14 @@ class FizzBuzz {
 
     setValues(quantity) {
         for(let i = 1; i <= quantity; i++) {
-            if(i % 3 === 0 && i % 5 === 0) {
+            const isMultipleOfFive = i % 5 === 0;
+            const isMultipleOfThree = i % 3 === 0;
+
+            if(isMultipleOfThree && isMultipleOfFive) {
                 this.values.push("FizzBuzz");
-            } else if(i % 3 === 0) {
+            } else if(isMultipleOfThree) {
                 this.values.push("Fizz");
-            } else if(i % 5 === 0) {
+            } else if(isMultipleOfFive) {
                 this.values.push("Buzz");
             } else {
                 this.values.push(i);
