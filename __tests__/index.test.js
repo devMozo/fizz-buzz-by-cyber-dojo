@@ -1,15 +1,14 @@
-import FizzBuzz from "../index.js";
+const FizzBuzz = require("../index.js");
 
 describe("MyFizzBuzzShould", () => {
 
-    beforeEach(() => {
-        const fizzBuzz = new FizzBuzz();
-    });
-
     test("Display numbers from 1 to 100", () => {
-        const values = fizzBuzz.getValues();
+        const fizzBuzz = new FizzBuzz();
+        fizzBuzz.setValues(100);
 
-        expect(values.split()).toHaveLength(100);
+        const valuesAsString = fizzBuzz.getValuesAsString();
+
+        expect(valuesAsString.split(" ")).toHaveLength(100);
     });
 
 });
