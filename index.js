@@ -5,7 +5,9 @@ class FizzBuzz {
 
     setValues(quantity) {
         for(let i = 1; i <= quantity; i++) {
-            if(i % 3 === 0) {
+            if(i % 3 === 0 && i % 5 === 0) {
+                this.values.push("FizzBuzz");
+            } else if(i % 3 === 0) {
                 this.values.push("Fizz");
             } else if(i % 5 === 0) {
                 this.values.push("Buzz");

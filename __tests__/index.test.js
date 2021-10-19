@@ -38,7 +38,7 @@ describe("MyFizzBuzzShould", () => {
         const values = fizzBuzz.getValues();
         const fizzWords = values.filter(value => value === "FizzBuzz");
 
-        expect(fizzWords).toHaveLength(11);
+        expect(fizzWords).toHaveLength(6);
     });
 
 });
